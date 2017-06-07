@@ -15,19 +15,20 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('isbn10')->unique();
-            $table->string('isbn13')->unique();
-            $table->string('google_id')->unique();
-            $table->string('oclc')->unique();
+            $table->string('isbn_10')->unique();
+            $table->string('isbn_13')->unique()->nullable();
+            $table->string('google_id')->unique()->nullable();
+            $table->string('oclc')->unique()->nullable();
 
-            $table->text('title');
-            $table->text('author');
-            $table->string('edition');
-            $table->text('publisher');
-            $table->string('page_length');
-            $table->text('subjects');
-            $table->string('price');
-            $table->boolean('sample_present');
+            $table->text('title')->nullable();
+            $table->text('author')->nullable();
+            $table->string('edition')->nullable();
+            $table->text('publisher')->nullable();
+            $table->text('published_date')->nullable();
+            $table->string('page_length')->nullable();
+            $table->text('subjects')->nullable();
+            $table->string('price')->nullable();
+            $table->boolean('sample_present')->nullable();
             $table->timestamps();
         });
     }
