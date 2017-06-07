@@ -51,6 +51,7 @@ class GenerateGoogleBookDetails extends Command
                 $interimISBN = str_pad($isbn_part, 9, '0', STR_PAD_LEFT);
                 $isbn_10 = $interimISBN . $isbn->checkDigit->make10($interimISBN);
                 $isbn_13 = $isbn->translate->to13($isbn_10);
+
                 GoogleBookScraper::saveGoogleBookData($isbn_10, $isbn_13);
             }
 

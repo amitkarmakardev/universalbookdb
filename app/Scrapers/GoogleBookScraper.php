@@ -13,6 +13,10 @@ class GoogleBookScraper
         $url = "https://www.googleapis.com/books/v1/volumes?q=isbn:{$isbn_10}";
         $jsonObj = json_decode(Scraper::getDetails($url));
 
+        if(Book::where('isbn_10', $isbn_10)->first() != null){
+            echo "Book {$isbn_10} already exists in database. Skipping....".PHP_EOL;
+            return;
+        }
         $gbook = new Book();
         $gbook->isbn_10 = $isbn_10;
         $gbook->isbn_13 = $isbn_13;
