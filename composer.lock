@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "cb7cb677aa0b64b54ff9bec4843bf41b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -147,6 +147,53 @@
                 "parser"
             ],
             "time": "2017-03-29T16:04:15+00:00"
+        },
+        {
+            "name": "fale/isbn",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fale/isbn.git",
+                "reference": "f0777e84ad432fdf2eda7a71ed4e98886f8c16b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Fale/isbn/f0777e84ad432fdf2eda7a71ed4e98886f8c16b4.zip",
+                "reference": "f0777e84ad432fdf2eda7a71ed4e98886f8c16b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Isbn": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabio Alessandro Locati",
+                    "email": "fabiolocati@gmail.com",
+                    "homepage": "http://fabiolocati.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "ISBN library",
+            "homepage": "http://github.com/fale/isbn",
+            "keywords": [
+                "ISBN",
+                "ISBN-10",
+                "ISBN-13"
+            ],
+            "time": "2015-10-03T11:18:48+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
